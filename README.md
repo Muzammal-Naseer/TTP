@@ -41,8 +41,8 @@ If you find our work, this repository and pretrained adversarial generators usef
 
 1. We designed a new training mechanism that allows an adversarial generator to explore  augmented  adversarial space during  training  which  enhances  transferability  of adversarial examples during inference. 
 2. We propose maximizing the mutual agreement between the given source and the target distributions. Our relaxed objective provides two crucial benifts: a) Generator can now model target ditribution by pushing global statistics between source and target domain closer in the discriminator's latent space, and b)  Training is not dependent on class impressions anymore, so our method can provide targeted guidance to the generator without the need of classification boundary information.  This allows an attacker to learn targeted generative perturbations from the unsupervised features.
-3. We propose a diverse and consistent experimental settings to faithfully evaluate target transferability of adversarial attacks: [Unknown Target Model](#Unknown Target Model),  [Unknown Training Mechanism](#Unknown Training Mechanism)
-, and [Unknown Input Processing](#Unknown Training Mechanism).
+3. We propose a diverse and consistent experimental settings to faithfully evaluate target transferability of adversarial attacks: [Unknown Target Model](#Unknown-Target-Model),  [Unknown Training Mechanism](#Unknown-Training-Mechanism)
+, and [Unknown Input Processing](#Unknown-Training-Mechanism).
 3. We provide a platform to track targeted transferability. Please see [Tracking SOTA Targeted Transferability](#Tracking-SOTA-Targeted-Transferability). (kindly let us know if you have a new attack method, we will add your results here)
 
 <p align="center">
