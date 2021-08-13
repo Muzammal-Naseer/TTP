@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser(description='Targeted Transferable Perturbation
 parser.add_argument('--test_dir', default='../../../data/IN/val')
 parser.add_argument('--batch_size', type=int, default=20, help='Batch size for evaluation')
 parser.add_argument('--eps', type=int, default=16, help='Perturbation Budget')
-parser.add_argument('--target_model', type=str, default='vgg19_bn', help='Black-Box(unknown) model')
+parser.add_argument('--target_model', type=str, default='vgg19_bn', help='Black-Box(unknown) model: SIN, Augmix etc')
 parser.add_argument('--num_targets', type=int, default=10, help='10 or 100 targets evaluation')
 parser.add_argument('--source_model', type=str, default='res50', help='TTP Discriminator: \
 {res18, res50, res101, res152, dense121, dense161, dense169, dense201,\
