@@ -150,12 +150,10 @@ Select the samples of 10 target classes from ImageNet validation. Perturb the sa
 
 ##  Why Augmentations Boost Transferability?
 <sup>([top](#contents))</sup>
-
 _[Ilyas et al.](https://arxiv.org/abs/1905.02175)  showed that adversarial examples can be explained by features of the attacked class label. In our targeted attack case, we wish to imprint the features of the target class distribution onto the source samples within an allowed distance. However, black-box (unknown) model might apply different set of transformations (from one layer to another) to process such features and reduce the target transferability. Training on adversarial augmented samples allows the generator to capture such targeted features that are robust to transformations that may vary from one model to another._
 
 ##  Why Ensemble of Weak Models Maximizes Transferability?
 <sup>([top](#contents))</sup>
-
 _Different models of the same family of networks can exploit different information to make prediction. One such example is shown in here. Generators are trained against Dense121 and Dense169 to target Snowmobile distribution. Unrestricted generator outputs reveal that Dense121 is more focused on Snowmobile's blades while Dense169 emphasizes the background pine tree patterns to discriminate Snowmobile samples. This complementary information from different models of the same family helps the generator to capture more generic global patterns which transfer better than any of the individual models._
 
 |Original Image|Source Model: Dense121, Target: Snowmobile|Source Model: Dense169, Target: Snowmobile|
@@ -164,7 +162,6 @@ _Different models of the same family of networks can exploit different informati
 
 ##  Generative Vs Iterative Attacks
 <sup>([top](#contents))</sup>
-
 - Image-specific (iterative) attacks run iterative optimization for each given sample. This optimization is expensive as it has to be repeated for each sample independently. On the other hand, a generator requires training but can adapt to input sample with a farward pass only.
 - Targeted global perturbations are more transferable as indicated by our results. Iteratively optimizing for a target using a single image inherently lacks the ability to model global perturbations. This is where generative methods excel as they can model such perturbations during training phase.
 
@@ -185,7 +182,6 @@ _Different models of the same family of networks can exploit different informati
 
 ## Tracking SOTA Targeted Transferability
 <sup>([top](#contents))</sup>
-
 Results on 10-Targets (sub-source) settings. 
 * Select 500 samples belonging to 10 targets {24,99,245,344,471,555,661,701,802,919} from ImageNet validation set.
 * Remove the samples of the target class. You are left with 450 samples.
