@@ -119,8 +119,8 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 
 
 ## Training
-1. _Source Domain dataset:_ You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
-2. _Target Domain dataset:_ We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set.
+<span style="color:blue">_Source Domain dataset:_</span> You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
+<span style="color:blue">_Target Domain dataset:_ </span> We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set.
 Run the script with your target of choice:
 ```
  ./scripts/train.sh
