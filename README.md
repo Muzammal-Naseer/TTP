@@ -161,8 +161,8 @@ _Different models of the same family of networks can exploit different informati
 | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/original_dense.png" > | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense121_802.png" >| <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense169_802.png" > 
 
 ##  Generative Vs Iterative Attacks
-<sup>([top](#contents))</sup>
-- Image-specific (iterative) attacks run iterative optimization for each given sample. This optimization is expensive as it has to be repeated for each sample independently. On the other hand, a generator requires training but can adapt to input sample with a farward pass only.
+
+-  Image-specific (iterative) attacks run iterative optimization for each given sample. This optimization is expensive as it has to be repeated for each sample independently. On the other hand, a generator requires training but can adapt to input sample with a farward pass only.
 - Targeted global perturbations are more transferable as indicated by our results. Iteratively optimizing for a target using a single image inherently lacks the ability to model global perturbations. This is where generative methods excel as they can model such perturbations during training phase.
 
 ### Key Developments made by Iterative Attacks
