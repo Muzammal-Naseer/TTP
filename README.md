@@ -38,10 +38,9 @@ If you find our work, this repository and pretrained adversarial generators usef
 12) [Visual Examples](#Visual-Examples) 
 
 ## Contributions
-
 1. We designed a new training mechanism that allows an adversarial generator to explore  augmented  adversarial space during  training  which  enhances  transferability  of adversarial examples during inference. 
 2. We propose maximizing the mutual agreement between the given source and the target distributions. Our relaxed objective provides two crucial benifts: a) Generator can now model target ditribution by pushing global statistics between source and target domain closer in the discriminator's latent space, and b)  Training is not dependent on class impressions anymore, so our method can provide targeted guidance to the generator without the need of classification boundary information.  This allows an attacker to learn targeted generative perturbations from the unsupervised features.
-3. We propose a diverse and consistent experimental settings to faithfully evaluate target transferability of adversarial attacks: [Unknown Target Model](#Unknown-Target-Model),  [Unknown Training Mechanism](#Unknown-Training-Mechanism)
+3. We propose a diverse and consistent experimental settings to evaluate target transferability of adversarial attacks: [Unknown Target Model](#Unknown-Target-Model),  [Unknown Training Mechanism](#Unknown-Training-Mechanism)
 , and [Unknown Input Processing](#Unknown-Training-Mechanism).
 3. We provide a platform to track targeted transferability. Please see [Tracking SOTA Targeted Transferability](#Tracking-SOTA-Targeted-Transferability). (kindly let us know if you have a new attack method, we will add your results here)
 
@@ -50,7 +49,7 @@ If you find our work, this repository and pretrained adversarial generators usef
 </p>
 
 ## Target Transferability Vs Model Disparity
-
+<sup>([top](#contents))</sup>
 Our analysis indicates that there is a fundemental difference between Targeted and Untargeted transferability. Model disparity plays a critical role in how the targeted perturbations are transferred from one model to another. Here is an example (average transferability accross 10 targets):
 
 <p align="center">
@@ -120,13 +119,14 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 
 
 ## Training
-
+1. _Create a Source Domain dataset._ You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
+2. _Create a target Domain dataset._ We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set. There are $\le 1300$ available for each target.
+Run the script with your target of choice:
 ```
  ./scripts/train.sh
 ```
 
 ## Evaluation
-
 Download any or all of the pretrained generators to directory "pretrained_generators".
  
 Run the following command to evaluate transferability of a target to (black-box) model on the ImageNet-Val.
@@ -135,7 +135,6 @@ Run the following command to evaluate transferability of a target to (black-box)
 ```
 
 ### 10/100-Targets (all-source)
-
 Perturb all samples of ImageNet validation (excluding the target class samples) to each of the 10/100 targets and observe the average target transferability to (black-box) model.
 
 ```
@@ -143,7 +142,6 @@ Perturb all samples of ImageNet validation (excluding the target class samples) 
 ```
 
 ### 10-Targets (sub-source)
-
 Select the samples of 10 target classes from ImageNet validation. Perturb the samples of these classes (excluding the target class samples) to each of 10 targets and observe the average target transferability to (black-box) model.
 
 ```
@@ -155,7 +153,6 @@ Select the samples of 10 target classes from ImageNet validation. Perturb the sa
 _[Ilyas et al.](https://arxiv.org/abs/1905.02175)  showed that adversarial examples can be explained by features of the attacked class label. In our targeted attack case, we wish to imprint the features of the target class distribution onto the source samples within an allowed distance. However, black-box (unknown) model might apply different set of transformations (from one layer to another) to process such features and reduce the target transferability. Training on adversarial augmented samples allows the generator to capture such targeted features that are robust to transformations that may vary from one model to another._
 
 ##  Why Ensemble of Weak Models Maximizes Transferability?
-<sup>([top](#contents))</sup>
 _Different models of the same family of networks can exploit different information to make prediction. One such example is shown in here. Generators are trained against Dense121 and Dense169 to target Snowmobile distribution. Unrestricted generator outputs reveal that Dense121 is more focused on Snowmobile's blades while Dense169 emphasizes the background pine tree patterns to discriminate Snowmobile samples. This complementary information from different models of the same family helps the generator to capture more generic global patterns which transfer better than any of the individual models._
 
 |Original Image|Source Model: Dense121, Target: Snowmobile|Source Model: Dense169, Target: Snowmobile|
@@ -195,6 +192,7 @@ Results on 10-Targets (sub-source) settings.
 Updating....Meanwhile, please have a look at our paper. 
 ```
 #### Unknown Target Model
+<sup>([top](#contents))</sup>
 _Attacker  has  access  to  a  pretrained  discriminator  trained  on labeled data but has no knowledge about the architecture of the  target  model._
 |Method| Attack type | Source Model| Target Model| Distance |24|99|245|344|471|555|661|701|802|919|Average|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -219,6 +217,7 @@ _Attacker  has  access  to  a  pretrained  discriminator  trained  on labeled da
 [TTP](#Citation)|Generative|ResNet50|VGG19_BN|16|
 
 #### Unknown Training Mechanism
+<sup>([top](#contents))</sup>
 _Attacker  has  knowledge about the architecture of the  target  model but unaware of its training mechanism._
 |Method| Attack type | Source Model| Target Model| Distance |24|99|245|344|471|555|661|701|802|919|Average|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -256,6 +255,7 @@ _Attacker  has  knowledge about the architecture of the  target  model but unawa
 [TTP](#Citation)|Generative|ResNet50|ADV|16|
 
 #### Unknown Input Processing
+<sup>([top](#contents))</sup>
 _Attacker  has  knowledge about the architecture of the  target  model but unaware of the input processing defense._
 |Method| Attack type | Source Model| Input Processing| Distance |24|99|245|344|471|555|661|701|802|919|Average|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
