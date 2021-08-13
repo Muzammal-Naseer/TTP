@@ -69,6 +69,16 @@ model_names = sorted(name for name in models.__dict__
 
 if args.target_model in model_names:
     model = models.__dict__[args.target_model](pretrained=True)
+elif args.target_model == 'SIN':
+    model = torchvision.models.resnet50(pretrained=False)
+    model = torch.nn.DataParallel(model)
+    checkpoint = torch.load('pretrained_models/resnet50_train_60_epochs-c8e5653e.pth.tar')
+    model.load_state_dict(checkpoint["state_dict"])
+elif args.target_model == 'Augmix':
+    model = torchvision.models.resnet50(pretrained=False)
+    model = torch.nn.DataParallel(model)
+    checkpoint = torch.load('pretrained_models/checkpoint.pth.tar')
+    model.load_state_dict(checkpoint["state_dict"])
 else:
     assert (args.target_model in model_names), 'Please provide correct target model names: {}'.format(model_names)
 

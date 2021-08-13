@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser(description='Targeted Transferable Perturbation
 parser.add_argument('--test_dir', default='../../../data/IN/val')
 parser.add_argument('--batch_size', type=int, default=20, help='Batch size for evaluation')
 parser.add_argument('--eps', type=int, default=16, help='Perturbation Budget')
-parser.add_argument('--target_model', type=str, default='vgg19_bn', help='Black-Box(unknown) model')
+parser.add_argument('--target_model', type=str, default='vgg19_bn', help='Black-Box(unknown) model: SIN, Augmix')
 parser.add_argument('--target', type=int, default=99, help='Target label to transfer')
 parser.add_argument('--source_model', type=str, default='res50', help='TTP Discriminator: \
 {res18, res50, res101, res152, dense121, dense161, dense169, dense201,\
@@ -76,6 +76,16 @@ model_names = sorted(name for name in models.__dict__
 
 if args.target_model in model_names:
     model = models.__dict__[args.target_model](pretrained=True)
+elif args.target_model == 'SIN':
+    model = torchvision.models.resnet50(pretrained=False)
+    model = torch.nn.DataParallel(model)
+    checkpoint = torch.load('pretrained_models/resnet50_train_60_epochs-c8e5653e.pth.tar')
+    model.load_state_dict(checkpoint["state_dict"])
+elif args.target_model == 'Augmix':
+    model = torchvision.models.resnet50(pretrained=False)
+    model = torch.nn.DataParallel(model)
+    checkpoint = torch.load('pretrained_models/checkpoint.pth.tar')
+    model.load_state_dict(checkpoint["state_dict"])
 else:
     assert (args.target_model in model_names), 'Please provide correct target model names: {}'.format(model_names)
 

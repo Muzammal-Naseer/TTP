@@ -9,6 +9,7 @@
 ## Updates \& News
 - TTP Training is available (13/07/2021).
 - TTP Evaluation against state-of-the-art input processing defense, [NRP](https://github.com/Muzammal-Naseer/NRP), is available (13/07/2021).
+- TTP Evaluation against unknown (black-box) traninig: [SIN](https://github.com/rgeirhos/Stylized-ImageNet), [Augmix](https://github.com/google-research/augmix) is available (13/07/2021).
 
 
 ## Citation
@@ -122,6 +123,7 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 
 1. _Source Domain dataset:_ You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
 2. _Target Domain dataset:_ We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set.
+
 Run the script with your target of choice:
 ```
  ./scripts/train.sh
