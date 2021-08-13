@@ -37,7 +37,7 @@ If you find our work, this repository and pretrained adversarial generators usef
 11) [What Can You Do?](#What-Can-You-Do)  
 12) [Visual Examples](#Visual-Examples) 
 
-## <sup>([top](#contents))</sup> Contributions
+## Contributions
 
 1. We designed a new training mechanism that allows an adversarial generator to explore  augmented  adversarial space during  training  which  enhances  transferability  of adversarial examples during inference. 
 2. We propose maximizing the mutual agreement between the given source and the target distributions. Our relaxed objective provides two crucial benifts: a) Generator can now model target ditribution by pushing global statistics between source and target domain closer in the discriminator's latent space, and b)  Training is not dependent on class impressions anymore, so our method can provide targeted guidance to the generator without the need of classification boundary information.  This allows an attacker to learn targeted generative perturbations from the unsupervised features.
@@ -61,8 +61,8 @@ Our analysis indicates that there is a fundemental difference between Targeted a
 - We note that the dependence on disparity in model architectures can be mitigated with ensemble learning from the models of same family. Targeted transferability from ensemble of e.g., VGG models can be higher than any of the individual VGG model. This is important because an attacker can learn strong transferable targeted patterns from weak models.
 
 
-## <sup>([top](#contents))</sup> Pretrained Targeted Generator
-
+## Pretrained Targeted Generator
+<sup>([top](#contents))</sup> 
 *If you find our pretrained Adversarial Generators useful, please consider [citing our work](#Citation).*
 
 Class to Label Mapping
@@ -117,13 +117,13 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 |ResNet50|[Tiger Shark](https://drive.google.com/drive/folders/1fI_XsbodMl8Is2sFdr5ZU9Qcou60xXOC?usp=sharing)|[Bulbul](https://drive.google.com/drive/folders/1r4xfWgjs9tdZtOwU5h6lOJcFoj5cYD5F?usp=sharing)|[Terrapin](https://drive.google.com/drive/folders/1rT60MIZHvz6-AzmFuk5VMdAgZUO4iC9K?usp=sharing)|[Komodo Dragon](https://drive.google.com/drive/folders/1htoZFTWngUohv8GUNX0nFN6yNN7daun6?usp=sharing)|[Thunder Snake](https://drive.google.com/drive/folders/1O00Hopt0IYQVSyPXQsG_Evg07oW5pXCn?usp=sharing)|[Trilobite](https://drive.google.com/drive/folders/1C9RgAmvYSyh48FIUs0tMdeg4yZcjmsdK?usp=sharing)|[Scorpion](https://drive.google.com/drive/folders/1-MCYTM-Q2qeuoP99aUrXPTnyUvWvGdDi?usp=sharing)|[Quail](https://drive.google.com/drive/folders/1wU77D8Cc2UcNVCvCdS8bhPwi634HkJ7S?usp=sharing)|[Jellyfish](https://drive.google.com/drive/folders/1oIWd_iqvC-MXCOJuyhNL5WTwPjTGqsFH?usp=sharing)|[Slug](https://drive.google.com/drive/folders/1UKA2_wRTlPkm0BkqyWvKgcKtXPXWy_ze?usp=sharing)|[Flamingo](https://drive.google.com/drive/folders/1d7e1eY7ksXuCmGNsPghsgN9y9_uqZ5ME?usp=sharing)|[Bustard](https://drive.google.com/drive/folders/1hVsbfCgVJi_qw50_liPHgcwwYbFlqqec?usp=sharing)|[Dowitcher](https://drive.google.com/drive/folders/1ExF72qzFb5mU4pu4F99Mrj8iXRqCsMPB?usp=sharing)|[Chihuahua](https://drive.google.com/drive/folders/1hI7NkCWpDlZC9xCgTTudhunOUHb6je7n?usp=sharing)|[Beagle](https://drive.google.com/drive/folders/14cQ1hfxm6FbGNakgLGfFfPkkJwQ5gvde?usp=sharing)|[Weimaraner](https://drive.google.com/drive/folders/1uJZxqHU-TnI0SsaMaLyot2s4qig-wjAb?usp=sharing)|[Lakeland Terrier](https://drive.google.com/drive/folders/1taRysT4irnTcg7kVDhuaJRGESaaw2wnp?usp=sharing)|[Australian Terrier](https://drive.google.com/drive/folders/1Lz8xXjMiBtBzHdj4KSRzLbYTh_mcJN3W?usp=sharing)|[Golden Retriever](https://drive.google.com/drive/folders/1jDkhmf4TujTGSi_Z90kkowuZRZSgulK0?usp=sharing)|[English Setter](https://drive.google.com/drive/folders/1z19p93VfdqcthIToH4w_qxg153mXMFXD?usp=sharing)|[Komondor](https://drive.google.com/drive/folders/1V9avSlR39V97lHBbM-g6zKcxoHNo62vt?usp=sharing)|[Appenzeller](https://drive.google.com/drive/folders/1wJP4Bk81EYaQ8rZkdyz-__ybri9jMp86?usp=sharing)|[Chow](https://drive.google.com/drive/folders/1s9ZQmZcdwFEby1xeyh2sy1NmvppjCMqi?usp=sharing)|[Keeshond](https://drive.google.com/drive/folders/1SYMV4Xr85r4rGrPMzBmTwvIt6TuCSm2O?usp=sharing)|[Hyena](https://drive.google.com/drive/folders/1_9fMuZ3WazBBVVLcozdzvGQJMB_Yy-7O?usp=sharing)|[Egyptian Cat](https://drive.google.com/drive/folders/1Nh88yfOc6-N7-TtoXpIiChXuTXEPrXdj?usp=sharing)|[Lion](https://drive.google.com/drive/folders/1_mEy5QQS6S3SbHXulowrFczu4Z4u39Q-?usp=sharing)|[Bee](https://drive.google.com/drive/folders/11CESAr_oI3JEfcZAJU_NLExjIxPHBWag?usp=sharing)|[Leafhopper](https://drive.google.com/drive/folders/1SWUYnuL_IETZy_52eIqO0uVpptqWvkuh?usp=sharing)|[Sea Urchin](https://drive.google.com/drive/folders/1V76wha8PeIdDoLBwx4jM0hxz1-DuwXIs?usp=sharing)|[Zebra](https://drive.google.com/drive/folders/1_Tui8L10ljwquEfABbY_74SV_l5LMxnn?usp=sharing)|[Polecat](https://drive.google.com/drive/folders/1bIe1uSkJm1YlEgzVdHCgdAWnPVMG8u1D?usp=sharing)|[Gorilla](https://drive.google.com/drive/folders/1EAXLfOAVF4X-6zW-O7clprtQxm_TN_Cq?usp=sharing)|[Langur](https://drive.google.com/drive/folders/14Y5icSx5IF1x4gk2CRQh8i_zaQzUhqEA?usp=sharing)|[Eel](https://drive.google.com/drive/folders/1V7c6UQ1QS8N9emHdWZsr8DCvKDeMMkec?usp=sharing)|[Anemone Fish](https://drive.google.com/drive/folders/1-CYYOhuuS7HSCGpysTlNCaiAucTAcE7d?usp=sharing)|[Airliner](https://drive.google.com/drive/folders/1Z56gdh0Gp02bm7Rck_WomuBRZ6N1PQHr?usp=sharing)|[Banjo](https://drive.google.com/drive/folders/1Z56gdh0Gp02bm7Rck_WomuBRZ6N1PQHr?usp=sharing)|[Basketball](https://drive.google.com/drive/folders/1WWI9mL8ecBgQuZ4DG5rgmzn2M9I9Tb5C?usp=sharing)|[Beaker](https://drive.google.com/drive/folders/1iTsVEH9H-pnr3HvpWhokyhwItGQ57wAS?usp=sharing)|[Bell Cote](https://drive.google.com/drive/folders/10HH-YBWmnMYhLd4d5xG-CRZ2olVRgeB0?usp=sharing)|[Bookcase](https://drive.google.com/drive/folders/1o6YK_L5wv6o5dsVHxm0O9M0sZCmBn6bs?usp=sharing)|[Buckle](https://drive.google.com/drive/folders/14JBuEp6KP5k_dE2g5TNyHwGQ_vIYOov8?usp=sharing)|[CD Player](https://drive.google.com/drive/folders/1_T4WFkIcdEYLEo42fAptdasc7iGmJltl?usp=sharing)|[Chain Saw](https://drive.google.com/drive/folders/1rleHJeP5z4_Ibxi2k61Rvc5tgijkapsY?usp=sharing)|[Coil](https://drive.google.com/drive/folders/1Pm6W4vfoV0CQIjJL_Crwd7FY0HNkzQoL?usp=sharing)|[Cornet](https://drive.google.com/drive/folders/1z4zpdpi4bbyyjrEy5nARdXqSF8Twxcql?usp=sharing)|[Crutch](https://drive.google.com/drive/folders/1gZ3cznPWK6b4qbQUUNmvevTQzjDnFvFo?usp=sharing)|[Dome](https://drive.google.com/drive/folders/1ZFNoRO6Cs-mr-ImeQ0-gVbMp_kXyX6oN?usp=sharing)|[Electric Guitar](https://drive.google.com/drive/folders/1KCUYBQRyoDvu9nXDpix_v_jdbxEmqXVl?usp=sharing)|[Garbage Truck](https://drive.google.com/drive/folders/1REQIoEdw2aamusVtbD1vYQRSSE8b54-z?usp=sharing)|[Greenhouse](https://drive.google.com/drive/folders/1cqKhJZqDJeku9PqohxVt1eeHLesi8I0q?usp=sharing)|[Grocery Store](https://drive.google.com/drive/folders/1X8eArLD67YV2nIlLMakC8Oo6lFfcds8P?usp=sharing)|[Honeycomb](https://drive.google.com/drive/folders/1DsHFC7ONveANfP3BjAySOBe2LZz34qeN?usp=sharing)|[iPod](https://drive.google.com/drive/folders/1xgnH9NeUg6iE3-iGTb-8AbqkhiMl8-oY?usp=sharing)|[Jigsaw Puzzle](https://drive.google.com/drive/folders/1XHiB4WQ4EO2jL7CDSGGhd0ka3qxVNYuD?usp=sharing)|[Lipstick](https://drive.google.com/drive/folders/1jHpFqnICmeWc0p7L71z0wa6oIRPy70ew?usp=sharing)|[Maillot](https://drive.google.com/drive/folders/1uyIPKAT1dvd9-kVRc5BQ28VCyBbE4UqP?usp=sharing)|[Maze](https://drive.google.com/drive/folders/1roaEbHZgXak5e0Lc7vThlPjhySg03ObZ?usp=sharing)|[Military Uniform](https://drive.google.com/drive/folders/18c0K9kszSm-vY4lC6hJiuaJeWNQw1vhc?usp=sharing)|[Neck Brace](https://drive.google.com/drive/folders/1dGCrjeUvc9raZwu4R2tmuvXHAU4yJrkV?usp=sharing)|[Overskirt](https://drive.google.com/drive/folders/1PyCikNF9soDGDko7_NAvh8Dn4ZP0xpU-?usp=sharing)|[Pay-phone](https://drive.google.com/drive/folders/1OJ5QE9uqWlLUom2j0YKckm_YG7J2oP3q?usp=sharing)|[Pickup](https://drive.google.com/drive/folders/1Ww43snwVcVDYtgiHXx29Op1mj229k9lz?usp=sharing)|[Pirate](https://drive.google.com/drive/folders/1duCcFLFnG0xCIoHnYnDRmk2A0M7XlBCr?usp=sharing)|[Poncho](https://drive.google.com/drive/folders/1TNQZDFidGWdu6oQnmU0pUvOCGYlbddAp?usp=sharing)|[Purse](https://drive.google.com/drive/folders/11RuTwqBz5QfQFy8cv8_akapjClIJVykg?usp=sharing)|[Rain Barrel](https://drive.google.com/drive/folders/19_oovfpIQsfBKLdQbobZFXvG9TqmvYvv?usp=sharing)|[Rotisserie](https://drive.google.com/drive/folders/1vrqXhDd51P3FKYFZ2rJ5hEOBQjFX4yYg?usp=sharing)|[School Bus](https://drive.google.com/drive/folders/17yZuDDDmCUPN0OwrOYPk_afg-1r1Hb5L?usp=sharing)|[Sewing Machine](https://drive.google.com/drive/folders/1jt9TBCPu8joM4EAxz8gXiSuflWpwI64m?usp=sharing)|[Shopping Cart](https://drive.google.com/drive/folders/12ZsX-UHSiPFqkZeDhEx2hCpQ6zZ_6SgN?usp=sharing)|[Spatula](https://drive.google.com/drive/folders/1-jtUSWLlSFvRJfpv305HGEIEO2s_XfwN?usp=sharing)|[Stove](https://drive.google.com/drive/folders/1Pbzr96pkFew4EwxRBlmiFoF1OznHdGrR?usp=sharing)|[Sunglass](https://drive.google.com/drive/folders/1Sj_PR0aTjLv2JbpozhsBQRFP82CAzobH?usp=sharing)|[Teapot](https://drive.google.com/drive/folders/15ILIWbyYWVP6-ckJd8lawhgabqVxuaNG?usp=sharing)|[Toaster](https://drive.google.com/drive/folders/1KHhhL12IKojaJXgqbYcgKlKbvWkV9lAg?usp=sharing)|[Tractor](https://drive.google.com/drive/folders/1wYwVcVeTrlpz5c5If07pPrIQwAr1alkt?usp=sharing)|[Umbrella](https://drive.google.com/drive/folders/1s_nPR33fiajQw_Agn2Rx57klOhJlOhGj?usp=sharing)|[Velvet](https://drive.google.com/drive/folders/1psptODSqTp1bxpkF1gB2ZjJOAYnPkydB?usp=sharing)|[Wallet](https://drive.google.com/drive/folders/1PWOOyETSgf5atrxRhQGjL52RQOFa4mcG?usp=sharing)|[Whiskey Jug](https://drive.google.com/drive/folders/1CRf3B1Mwv5Codx_DV4iOavsBjijfbZTZ?usp=sharing)|[Ice Lolly](https://drive.google.com/drive/folders/1cIlrKFRyGnZqlSDZ7NdNb-qKa9oWYhUb?usp=sharing)|[Pretzel](https://drive.google.com/drive/folders/1exFKdRIHg1OmHPs3r8X3crFwWY3_MK06?usp=sharing)|[Cardoon](https://drive.google.com/drive/folders/1c3dnqukLMO_bHN9mdCdx0oAVh9mVEXXk?usp=sharing)|[Hay](https://drive.google.com/drive/folders/1lb2ayMfYvaE46xBlRjjdIbh_di3TVtbv?usp=sharing)|[Pizza](https://drive.google.com/drive/folders/14gxrhhO-3MOjI7NS531PzSaIM2e5zOyR?usp=sharing)|[Volcano](https://drive.google.com/drive/folders/1cWozNq2RnKXpDb3zP6KyT-nctlHjdu-I?usp=sharing)|[Rapeseed](https://drive.google.com/drive/folders/1mLPdaYNAjwxJRcBkdRbCPy48KTzxMVap?usp=sharing)|[Agaric](https://drive.google.com/drive/folders/1Ljjd-MfjTpWxRbeRxTDFyS1Zqw56-sDr?usp=sharing)|
 
 
-## <sup>([top](#contents))</sup> Training
+## Training
 
 ```
  ./scripts/train.sh
 ```
 
-## <sup>([top](#contents))</sup> Evaluation
+## Evaluation
 
 Download any or all of the pretrained generators to directory "pretrained_generators".
  
@@ -148,13 +148,13 @@ Select the samples of 10 target classes from ImageNet validation. Perturb the sa
   python eval_sub.py  --data_dir data/IN/val --source_model res50 --source_domain IN --eps 16--target_model vgg19_bn 
 ```
 
-## <sup>([top](#contents))</sup> Why Augmentations Boost Transferability?
-
+##  Why Augmentations Boost Transferability?
+<sup>([top](#contents))</sup>
 
 _[Ilyas et al.](https://arxiv.org/abs/1905.02175)  showed that adversarial examples can be explained by features of the attacked class label. In our targeted attack case, we wish to imprint the features of the target class distribution onto the source samples within an allowed distance. However, black-box (unknown) model might apply different set of transformations (from one layer to another) to process such features and reduce the target transferability. Training on adversarial augmented samples allows the generator to capture such targeted features that are robust to transformations that may vary from one model to another._
 
-## <sup>([top](#contents))</sup> Why Ensemble of Weak Models Maximizes Transferability?
-
+##  Why Ensemble of Weak Models Maximizes Transferability?
+<sup>([top](#contents))</sup>
 
 _Different models of the same family of networks can exploit different information to make prediction. One such example is shown in here. Generators are trained against Dense121 and Dense169 to target Snowmobile distribution. Unrestricted generator outputs reveal that Dense121 is more focused on Snowmobile's blades while Dense169 emphasizes the background pine tree patterns to discriminate Snowmobile samples. This complementary information from different models of the same family helps the generator to capture more generic global patterns which transfer better than any of the individual models._
 
@@ -162,8 +162,8 @@ _Different models of the same family of networks can exploit different informati
 |---|:---:|:---:|
 | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/original_dense.png" > | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense121_802.png" >| <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense169_802.png" > 
 
-## <sup>([top](#contents))</sup> Generative Vs Iterative Attacks
-
+##  Generative Vs Iterative Attacks
+<sup>([top](#contents))</sup>
 
 - Image-specific (iterative) attacks run iterative optimization for each given sample. This optimization is expensive as it has to be repeated for each sample independently. On the other hand, a generator requires training but can adapt to input sample with a farward pass only.
 - Targeted global perturbations are more transferable as indicated by our results. Iteratively optimizing for a target using a single image inherently lacks the ability to model global perturbations. This is where generative methods excel as they can model such perturbations during training phase.
@@ -274,18 +274,18 @@ _Attacker  has  knowledge about the architecture of the  target  model but unawa
 [TTP](#Citation)|Generative|ResNet50|NRP|16|
 
 
-## <sup>([top](#contents))</sup> What Can You Do? 
+##  What Can You Do? 
 
 ```
 We will highlight future research directions here.
 ```
 
-## <sup>([top](#contents))</sup> References
-
+##  References
+<sup>([top](#contents))</sup>
 Code depends on [BasicSR](https://github.com/xinntao/BasicSR). We thank them for their wonderful code base. 
 
-## <sup>([top](#contents))</sup> Visual Examples
-
+##  Visual Examples
+<sup>([top](#contents))</sup>
 Here are some of the unrestricted targeted patterns found by our method (TTP). This is just for visualization purposes. It is important to note that during inference, these adversaries are projected within a valid distance (e.g l_inf<=16).
 
 
