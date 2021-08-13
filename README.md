@@ -9,7 +9,7 @@
 ## Updates \& News
 - TTP Training is available (13/07/2021).
 - TTP Evaluation against state-of-the-art input processing defense, [NRP](https://github.com/Muzammal-Naseer/NRP), is available (13/07/2021).
-- TTP Evaluation against unknown (black-box) traninig: [SIN](https://github.com/rgeirhos/Stylized-ImageNet), [Augmix](https://github.com/google-research/augmix) is available (13/07/2021).
+- TTP Evaluation against unknown (black-box) training: [SIN](https://github.com/rgeirhos/Stylized-ImageNet), [Augmix](https://github.com/google-research/augmix) is available (13/07/2021).
 
 
 ## Citation
@@ -130,7 +130,8 @@ Run the script with your target of choice:
 ```
 
 ## Evaluation
-Download any or all of the pretrained generators to directory "pretrained_generators".
+1. Download any or all of the pretrained generators to directory "pretrained_generators".
+2. Download ImageNet models trained with [stylized ImageNet](https://github.com/rgeirhos/Stylized-ImageNet) and [augmentations](https://github.com/google-research/augmix) to directory "pretrained_models"
  
 Run the following command to evaluate transferability of a target to (black-box) model on the ImageNet-Val.
 ```
