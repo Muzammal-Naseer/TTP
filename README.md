@@ -119,8 +119,8 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 
 
 ## Training
-1. _Source Domain dataset._ You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
-2. _Target Domain dataset._ We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set.
+1. _Source Domain dataset:_ You can start with paintings dataset such as described in her [Cross Domain Attack](#https://github.com/Muzammal-Naseer/Cross-domain-perturbations).
+2. _Target Domain dataset:_ We obtain samples of a certain target domain (e.g. ImageNet class) from ImageNet training set.
 Run the script with your target of choice:
 ```
  ./scripts/train.sh
@@ -153,6 +153,7 @@ Select the samples of 10 target classes from ImageNet validation. Perturb the sa
 _[Ilyas et al.](https://arxiv.org/abs/1905.02175)  showed that adversarial examples can be explained by features of the attacked class label. In our targeted attack case, we wish to imprint the features of the target class distribution onto the source samples within an allowed distance. However, black-box (unknown) model might apply different set of transformations (from one layer to another) to process such features and reduce the target transferability. Training on adversarial augmented samples allows the generator to capture such targeted features that are robust to transformations that may vary from one model to another._
 
 ##  Why Ensemble of Weak Models Maximizes Transferability?
+<sup>([top](#contents))</sup>
 _Different models of the same family of networks can exploit different information to make prediction. One such example is shown in here. Generators are trained against Dense121 and Dense169 to target Snowmobile distribution. Unrestricted generator outputs reveal that Dense121 is more focused on Snowmobile's blades while Dense169 emphasizes the background pine tree patterns to discriminate Snowmobile samples. This complementary information from different models of the same family helps the generator to capture more generic global patterns which transfer better than any of the individual models._
 
 |Original Image|Source Model: Dense121, Target: Snowmobile|Source Model: Dense169, Target: Snowmobile|
