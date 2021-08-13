@@ -37,8 +37,8 @@ If you find our work, this repository and pretrained adversarial generators usef
 11) [What Can You Do?](#What-Can-You-Do)  
 12) [Visual Examples](#Visual-Examples) 
 
-## Contributions
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Contributions
+
 1. We designed a new training mechanism that allows an adversarial generator to explore  augmented  adversarial space during  training  which  enhances  transferability  of adversarial examples during inference. 
 2. We propose maximizing the mutual agreement between the given source and the target distributions. Our relaxed objective provides two crucial benifts: a) Generator can now model target ditribution by pushing global statistics between source and target domain closer in the discriminator's latent space, and b)  Training is not dependent on class impressions anymore, so our method can provide targeted guidance to the generator without the need of classification boundary information.  This allows an attacker to learn targeted generative perturbations from the unsupervised features.
 3. We provide a platform to track targeted transferability. Please see [Tracking SOTA Targeted Transferability](#Tracking-SOTA-Targeted-Transferability). (kindly let us know if you have a new attack method, we will add your results here)
@@ -61,8 +61,8 @@ Our analysis indicates that there is a fundemental difference between Targeted a
 - We note that the dependence on disparity in model architectures can be mitigated with ensemble learning from the models of same family. Targeted transferability from ensemble of e.g., VGG models can be higher than any of the individual VGG model. This is important because an attacker can learn strong transferable targeted patterns from weak models.
 
 
-## Pretrained Targeted Generator
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Pretrained Targeted Generator
+
 *If you find our pretrained Adversarial Generators useful, please consider [citing our work](#Citation).*
 
 Class to Label Mapping
@@ -148,13 +148,13 @@ Select the samples of 10 target classes from ImageNet validation. Perturb the sa
   python eval_sub.py  --data_dir data/IN/val --source_model res50 --source_domain IN --eps 16--target_model vgg19_bn 
 ```
 
-## Why Augmentations Boost Transferability?
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Why Augmentations Boost Transferability?
+
 
 _[Ilyas et al.](https://arxiv.org/abs/1905.02175)  showed that adversarial examples can be explained by features of the attacked class label. In our targeted attack case, we wish to imprint the features of the target class distribution onto the source samples within an allowed distance. However, black-box (unknown) model might apply different set of transformations (from one layer to another) to process such features and reduce the target transferability. Training on adversarial augmented samples allows the generator to capture such targeted features that are robust to transformations that may vary from one model to another._
 
-## Why Ensemble of Weak Models Maximizes Transferability?
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Why Ensemble of Weak Models Maximizes Transferability?
+
 
 _Different models of the same family of networks can exploit different information to make prediction. One such example is shown in here. Generators are trained against Dense121 and Dense169 to target Snowmobile distribution. Unrestricted generator outputs reveal that Dense121 is more focused on Snowmobile's blades while Dense169 emphasizes the background pine tree patterns to discriminate Snowmobile samples. This complementary information from different models of the same family helps the generator to capture more generic global patterns which transfer better than any of the individual models._
 
@@ -162,8 +162,8 @@ _Different models of the same family of networks can exploit different informati
 |---|:---:|:---:|
 | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/original_dense.png" > | <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense121_802.png" >| <img src="https://github.com/Muzammal-Naseer/TTP/blob/main/assets/unrestricted_adv_dense169_802.png" > 
 
-## Generative Vs Iterative Attacks
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Generative Vs Iterative Attacks
+
 
 - Image-specific (iterative) attacks run iterative optimization for each given sample. This optimization is expensive as it has to be repeated for each sample independently. On the other hand, a generator requires training but can adapt to input sample with a farward pass only.
 - Targeted global perturbations are more transferable as indicated by our results. Iteratively optimizing for a target using a single image inherently lacks the ability to model global perturbations. This is where generative methods excel as they can model such perturbations during training phase.
@@ -280,12 +280,12 @@ _Attacker  has  knowledge about the architecture of the  target  model but unawa
 We will highlight future research directions here.
 ```
 
-## References
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> References
+
 Code depends on [BasicSR](https://github.com/xinntao/BasicSR). We thank them for their wonderful code base. 
 
-## Visual Examples
-<sup>([top](#contents))</sup>
+## <sup>([top](#contents))</sup> Visual Examples
+
 Here are some of the unrestricted targeted patterns found by our method (TTP). This is just for visualization purposes. It is important to note that during inference, these adversaries are projected within a valid distance (e.g l_inf<=16).
 
 
