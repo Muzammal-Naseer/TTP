@@ -7,8 +7,8 @@
 > 
 
 ## Updates \& News
-- TTP Training is available.
-- TTP Evaluation against state-of-the-art input processing defense, [Neural Purification](https://github.com/Muzammal-Naseer/NRP), is available.
+- TTP Training is available (13/07/2021).
+- TTP Evaluation against state-of-the-art input processing defense, [NRP](https://github.com/Muzammal-Naseer/NRP), is available (13/07/2021).
 
 
 ## Citation
@@ -119,7 +119,7 @@ We trained generator for 100 targets but for ResNet50 only. These generators are
 
 ## Training
 ```
- To be released soon
+ ./scripts/train.sh
 ```
 
 ## Evaluation
