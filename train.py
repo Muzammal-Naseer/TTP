@@ -76,7 +76,7 @@ netG.to(device)
 
 # Optimizer
 optimG = optim.Adam(netG.parameters(), lr=args.lr, betas=(0.5, 0.999))
-torchvision.transforms.PILToTensor()
+
 # Data
 train_transform = transforms.Compose([
     transforms.Resize(scale_size),
@@ -223,7 +223,6 @@ if args.gs:
 
 
 criterion_kl = nn.KLDivLoss(size_average=False)
-cosine = torch.nn.CosineSimilarity(dim=1, eps=1e-08)
 for epoch in range(args.epochs):
     running_loss = 0
     for i, (imgs, _) in enumerate(train_loader):
