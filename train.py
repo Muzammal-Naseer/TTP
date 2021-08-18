@@ -28,7 +28,7 @@ parser.add_argument('--eps', type=int, default=10, help='Perturbation Budget dur
 parser.add_argument('--model_type', type=str, default='resnet50',
                     help='Model under attack (discrimnator)')
 parser.add_argument('--gs', action='store_true', help='Apply gaussian smoothing')
-parser.add_argument('--save_dir', type=str, default='pretrained_generators_retrain', help='Directory to save generators')
+parser.add_argument('--save_dir', type=str, default='pretrained_generators', help='Directory to save generators')
 args = parser.parse_args()
 print(args)
 
