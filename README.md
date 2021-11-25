@@ -1,7 +1,7 @@
 # On Generating Transferable Targeted Perturbations (ICCV'21)
 [Muzammal Naseer](https://scholar.google.ch/citations?user=tM9xKA8AAAAJ&hl=en), [Salman Khan](https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=en), [Munawar Hayat](https://scholar.google.ch/citations?user=Mx8MbWYAAAAJ&hl=en&oi=ao), [Fahad Shahbaz Khan](https://scholar.google.ch/citations?user=zvaeYnUAAAAJ&hl=en&oi=ao), and [Fatih Porikli](https://scholar.google.com/citations?user=VpB8NZ8AAAAJ&hl=en)
 
-**Paper**: https://arxiv.org/abs/2103.14641
+[Paper] ([arXiv]https://arxiv.org/abs/2103.14641)
 
 > **Abstract:** *While the untargeted black-box transferability of adversarial perturbations has been extensively studied before, changing an unseen model's decisions to a specific \`targeted\' class remains a challenging feat. In this paper, we propose a new generative approach for highly transferable targeted perturbations (ours). We note that the existing methods are less suitable for this task due to their reliance on class-boundary information that changes from one model to another, thus reducing transferability. In contrast, our approach matches the  perturbed image \`distribution\' with that of the target class, leading to high targeted transferability rates. To this end, we propose a new objective function that not only aligns the global distributions of source and target images, but also matches the local neighbourhood structure between the two domains. Based on the proposed objective, we train a generator function that can adaptively synthesize perturbations specific to a given input. Our generative approach is independent of the source or target domain labels, while consistently performs well against state-of-the-art methods on a wide range of attack settings. As an example, we achieve 32.63% target transferability from (an adversarially weak) VGG19<sub>BN</sub> to (a strong) WideResNet on ImageNet val. set, which is 4x higher than the previous best generative attack and 16x better than instance-specific iterative attack.*
 > 
@@ -15,12 +15,14 @@
 ## Citation
 If you find our work, this repository and pretrained adversarial generators useful. Please consider giving a star :star: and cite our work.
 ```bibtex
-    @InProceedings{naseer2021generating,
-        title={On Generating Transferable Targeted Perturbations},
-        author={Muzammal Naseer, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Fatih Porikli},
-        year={2021},
-        booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision}
-    }
+@InProceedings{Naseer_2021_ICCV,
+    author    = {Naseer, Muzammal and Khan, Salman and Hayat, Munawar and Khan, Fahad Shahbaz and Porikli, Fatih},
+    title     = {On Generating Transferable Targeted Perturbations},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {7708-7717}
+}
 ```
 
 ### Contents  
