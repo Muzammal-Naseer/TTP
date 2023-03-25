@@ -186,6 +186,7 @@ _Different models of the same family of networks can exploit different informati
 * [CDA](https://arxiv.org/abs/1905.11736) introduced a mechanism to train generative network against pretrained-model via relativistic cross-entropy (NeurIPS 2019).
 * [TTP](#Citation) introudced generative training to match a source and target domain within latent space of a pretrained-model based on gloabl distribution matching objectives. It does not rely on data annotations (labels) or classification boundary information (ICCV 2021).
 
+<!--
 ## Tracking SOTA Targeted Transferability
 <sup>([top](#contents))</sup>
 Results on 10-Targets (sub-source) settings. 
@@ -194,7 +195,7 @@ Results on 10-Targets (sub-source) settings.
 * Run target attack to map these 450 samples to selected target (perturbation budget l_inf=16).
 * Repeat this process for all the 10 targets.
 * Report average target accuracy.
-
+-->
 ```
 Updating....Meanwhile, please have a look at our paper. 
 ```
