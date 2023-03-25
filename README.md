@@ -36,7 +36,9 @@ If you find our work, this repository and pretrained adversarial generators usef
 9) [Generative Vs Iterative Attacks](#Generative-Vs-Iterative-Attacks)
      * [Key Developments made by Iterative Attacks](#Key-Developments-made-by-Iterative-Attacks)
      * [Key Developments made by Generative Attacks](#Key-Developments-made-by-Generative-Attacks)
+<!--
 10) [Tracking SOTA Targeted Transferability](#Tracking-SOTA-Targeted-Transferability) 
+-->
 11) [What Can You Do?](#What-Can-You-Do)  
 12) [Visual Examples](#Visual-Examples) 
 
