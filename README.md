@@ -195,7 +195,7 @@ Results on 10-Targets (sub-source) settings.
 * Run target attack to map these 450 samples to selected target (perturbation budget l_inf=16).
 * Repeat this process for all the 10 targets.
 * Report average target accuracy.
--->
+
 ```
 Updating....Meanwhile, please have a look at our paper. 
 ```
@@ -285,7 +285,7 @@ _Attacker  has  knowledge about the architecture of the  target  model but unawa
 ```
 We will highlight future research directions here.
 ```
-
+-->
 ##  References
 <sup>([top](#contents))</sup>
 Code depends on [BasicSR](https://github.com/xinntao/BasicSR). We thank them for their wonderful code base. 
