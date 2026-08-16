@@ -88,14 +88,18 @@ Class Number: Class Name
 ```
 ### Targeted Adversarial Generators trained against Single ImageNet Model.
 This is how the pretrianed generators are saved: _"netG_Discriminator_sourceDomain_epoch_targetDomain.pth" e.g., netG_vgg11_IN_19_24.pth means that generator is trained agisnt vgg11 (Discriminator) for 20 epoch by maximizing agreement between the source domain (natural images from ImageNet (IN)) and the target domain (images of Grey Owl)._ 
+
 Source Models: VGG11, VGG13, VGG16, VGG19, VGG11_BN, VGG13_BN, VGG16_BN, VGG19_BN, ResNet18, ResNet50, ResNet101, ResNet152, Dense121, Dense161, Dense169, Dense201
 
 ### Targeted Adversarial Generators trained against Ensemble of ImageNet Model.
+
 Source Ensemble: VGG{11,13,16,19}, Res{18,50,101,152}, Dense{121,161,169,201}
 
 
 ### Targeted Adversarial Generators trained against ResNet50.
+
 We trained generators for 100 targets, but only for ResNet50. These generators are for the rest of the 90 targets distributed across ImageNet Classes.
+
 Source Models: ResNet50 
 
 These models can be downloaded from [here](https://drive.google.com/drive/folders/18ECJRvNMXeCh7oNXdl88RE7vuAFzwRmI?usp=drive_link)
